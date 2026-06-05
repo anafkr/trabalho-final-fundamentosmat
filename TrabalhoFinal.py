@@ -1,5 +1,6 @@
 # Trabalho 1 - Recursividade
 #  Fundamentos Matemáticos para Computação
+# Ana Luiza Kruger, Eloá Brizeis Costa Santana e Giulia Guizzo Baladão Santos
 # Exercícios: 3 (Torres de Hanói), 4 (Inversão de String), 5 (Decimal para Binário)
 
 
