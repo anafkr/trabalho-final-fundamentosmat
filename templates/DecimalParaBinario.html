@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimal para Binário - Fundamentos Matemáticos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Trabalho Final - Fundamentos Matemáticos</h1>
+        <p>Autores: [Nome dos Autores Aqui]</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Decimal para Binário (Recursão)</h2>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="decimal">Digite um número inteiro positivo:</label>
+                    <input type="number" id="decimal" name="decimal" min="0" value="{{ decimal or '' }}" placeholder="Ex: 25" required>
+                </div>
+                <button type="submit" class="btn-submit">Converter para Binário</button>
+            </form>
+
+            {% if resultado is not none %}
+            <div class="result-box">
+                <h3>Resultado em Binário:</h3>
+                <p style="font-size: 1.3rem; color: var(--azul-escuro); font-weight: bold; letter-spacing: 2px; margin-bottom: 15px;">
+                    {{ resultado }}
+                </p>
+                
+                <h3>Visualização das Divisões Sucessivas:</h3>
+                <ul class="steps-list">
+                    {% for passo in historico %}
+                        <li>{{ passo }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            <a href="{{ url_for('index') }}" class="btn-back">&larr; Voltar para a Home</a>
+        </div>
+    </main>
+
+    <footer>
+        Desenvolvido por: [Nome dos Autores Aqui] &copy; 2026
+    </footer>
+
+</body>
+</html>

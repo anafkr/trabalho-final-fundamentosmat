@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torres de Hanói - Fundamentos Matemáticos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Trabalho Final - Fundamentos Matemáticos</h1>
+        <p>Autores: [Nome dos Autores Aqui]</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Torres de Hanói (Recursão)</h2>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="discos">Número de Discos (Recomendado de 1 a 5):</label>
+                    <input type="number" id="discos" name="discos" min="1" max="10" value="{{ discos or 3 }}" required>
+                </div>
+                <button type="submit" class="btn-submit">Resolver e Gerar Passos</button>
+            </form>
+
+            {% if passos is not none %}
+            <div class="result-box">
+                <h3>Passo a Passo da Resolução:</h3>
+                <p>Total de movimentos necessários: <strong>{{ passos|length }}</strong></p>
+                <ul class="steps-list">
+                    {% for passo in passos %}
+                        <li>{{ passo }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            <a href="{{ url_for('index') }}" class="btn-back">&larr; Voltar para a Home</a>
+        </div>
+    </main>
+
+    <footer>
+        Desenvolvido por: [Nome dos Autores Aqui] &copy; 2026
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversão de String - Fundamentos Matemáticos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Trabalho Final - Fundamentos Matemáticos</h1>
+        <p>Autores: [Nome dos Autores Aqui]</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Inversão de String (Recursão)</h2>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="texto">Digite uma palavra ou frase:</label>
+                    <input type="text" id="texto" name="texto" value="{{ texto or '' }}" placeholder="Ex: Matematica" required>
+                </div>
+                <button type="submit" class="btn-submit">Inverter String</button>
+            </form>
+
+            {% if resultado is not none %}
+            <div class="result-box">
+                <h3>Resultado da Inversão:</h3>
+                <p style="font-size: 1.2rem; color: var(--rosa-escuro); font-weight: bold; margin-bottom: 15px;">
+                    {{ resultado }}
+                </p>
+                
+                <h3>Rastreamento das Chamadas Recursivas:</h3>
+                <ul class="steps-list">
+                    {% for passo in historico %}
+                        <li>{{ passo }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            <a href="{{ url_for('index') }}" class="btn-back">&larr; Voltar para a Home</a>
+        </div>
+    </main>
+
+    <footer>
+        Desenvolvido por: [Nome dos Autores Aqui] &copy; 2026
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho Final - Fundamentos Matemáticos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Trabalho Final - Fundamentos Matemáticos</h1>
+        <p>Autores: [Nome dos Autores Aqui]</p>
+    </header>
+
+    <main>
+        <div class="nav-container">
+            <a href="{{ url_for('torres_de_hanoi') }}" class="btn-menu">Torres de Hanói</a>
+            <a href="{{ url_for('inversao_de_string') }}" class="btn-menu">Inversão de String</a>
+            <a href="{{ url_for('decimal_para_binario') }}" class="btn-menu">Decimal para Binário</a>
+        </div>
+    </main>
+
+    <footer>
+        Desenvolvido por: [Nome dos Autores Aqui] &copy; 2026
+    </footer>
+
+</body>
+</html>

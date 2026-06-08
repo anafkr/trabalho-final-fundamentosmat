@@ -1,0 +1,212 @@
+/* Paleta de Cores Base em Variáveis CSS */
+:root {
+    --rosa-pastel: #ffd0e0;
+    --azul-pastel: #cceaff;
+    --azul-escuro: #4e57c4;
+    --rosa-escuro: #ca5584;
+    --off-white: #FAFAFA;
+    --shadow: rgba(0, 0, 0, 0.05);
+    --shadow-hover: rgba(0, 0, 0, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--off-white);
+    color: var(--azul-escuro);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--azul-escuro);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: var(--rosa-pastel);
+    opacity: 0.9;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Container de botões da Index */
+.nav-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn-menu {
+    background-color: white;
+    color: var(--azul-escuro);
+    border: 2px solid var(--azul-pastel);
+    padding: 20px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--shadow);
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 220px;
+}
+
+.btn-menu:hover {
+    transform: translateY(-4px);
+    background-color: var(--azul-pastel);
+    border-color: var(--azul-escuro);
+    color: var(--azul-escuro);
+    box-shadow: 0 6px 15px var(--shadow-hover);
+}
+
+/* Estilização dos Cards de Conteúdo (Funcionalidades) */
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px var(--shadow);
+    width: 100%;
+    max-width: 700px;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.card h2 {
+    color: var(--rosa-escuro);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--rosa-pastel);
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--azul-pastel);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--azul-escuro);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: var(--rosa-escuro);
+}
+
+.btn-submit {
+    background-color: var(--rosa-escuro);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #A0134B;
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 25px;
+    color: var(--azul-escuro);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.btn-back:hover {
+    color: var(--rosa-escuro);
+}
+
+/* Área de Resultados e Passos Visuais */
+.result-box {
+    margin-top: 25px;
+    background-color: var(--azul-pastel);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid var(--azul-escuro);
+}
+
+.result-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.steps-list {
+    list-style: none;
+    margin-top: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.steps-list li {
+    background: white;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    border-left: 3px solid var(--rosa-escuro);
+}
+
+footer {
+    background-color: #F0F0F0;
+    color: #666;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    border-top: 1px solid #E0E0E0;
+}
