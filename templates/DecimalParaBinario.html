@@ -10,42 +10,74 @@
 
     <header>
         <h1>Trabalho Final - Fundamentos Matemáticos</h1>
-        <p>Autores: [Nome dos Autores Aqui]</p>
+        <p>Ana Luiza, Giulia Guizzo e Eloá Brizeis</p>
     </header>
 
     <main>
-        <div class="card">
-            <h2>Decimal para Binário (Recursão)</h2>
-            <form method="POST">
-                <div class="form-group">
-                    <label for="decimal">Digite um número inteiro positivo:</label>
-                    <input type="number" id="decimal" name="decimal" min="0" value="{{ decimal or '' }}" placeholder="Ex: 25" required>
-                </div>
-                <button type="submit" class="btn-submit">Converter para Binário</button>
-            </form>
 
-            {% if resultado is not none %}
-            <div class="result-box">
-                <h3>Resultado em Binário:</h3>
-                <p style="font-size: 1.3rem; color: var(--azul-escuro); font-weight: bold; letter-spacing: 2px; margin-bottom: 15px;">
-                    {{ resultado }}
-                </p>
-                
-                <h3>Visualização das Divisões Sucessivas:</h3>
-                <ul class="steps-list">
-                    {% for passo in historico %}
-                        <li>{{ passo }}</li>
-                    {% endfor %}
-                </ul>
+    <div class="algorithm-header">
+        <div class="algorithm-icon">💻</div>
+        <h1>Decimal para Binário</h1>
+        <p>
+            Conversão recursiva de números decimais para representação binária,
+            exibindo todas as divisões sucessivas realizadas pelo algoritmo.
+        </p>
+    </div>
+
+    <div class="card">
+
+        <form method="POST">
+
+            <div class="form-group">
+                <label for="decimal">Número Decimal</label>
+
+                <input
+                    type="number"
+                    id="decimal"
+                    name="decimal"
+                    min="0"
+                    value="{{ decimal or '' }}"
+                    placeholder="Ex: 25"
+                    required>
             </div>
-            {% endif %}
 
-            <a href="{{ url_for('index') }}" class="btn-back">&larr; Voltar para a Home</a>
+            <button type="submit" class="btn-submit">
+                Converter para Binário
+            </button>
+
+        </form>
+
+        {% if resultado is not none %}
+
+        <div class="result-box">
+
+            <div class="result-highlight">
+                <span>Resultado</span>
+                <strong>{{ resultado }}</strong>
+            </div>
+
+            <h3>Passo a Passo da Recursão</h3>
+
+            <ul class="steps-list">
+                {% for passo in historico %}
+                <li>{{ passo }}</li>
+                {% endfor %}
+            </ul>
+
         </div>
-    </main>
+
+        {% endif %}
+
+        <a href="{{ url_for('index') }}" class="btn-back">
+            ← Voltar para Home
+        </a>
+
+    </div>
+
+</main>
 
     <footer>
-        Desenvolvido por: [Nome dos Autores Aqui] &copy; 2026
+        Desenvolvido por: Ana Luiza, Giulia Guizzo e Eloá Brizeis &copy; 2026
     </footer>
 
 </body>

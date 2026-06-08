@@ -10,42 +10,75 @@
 
     <header>
         <h1>Trabalho Final - Fundamentos Matemáticos</h1>
-        <p>Autores: [Nome dos Autores Aqui]</p>
+        <p>Ana Luiza, Giulia Guizzo e Eloá Brizeis</p>
     </header>
 
     <main>
-        <div class="card">
-            <h2>Inversão de String (Recursão)</h2>
-            <form method="POST">
-                <div class="form-group">
-                    <label for="texto">Digite uma palavra ou frase:</label>
-                    <input type="text" id="texto" name="texto" value="{{ texto or '' }}" placeholder="Ex: Matematica" required>
-                </div>
-                <button type="submit" class="btn-submit">Inverter String</button>
-            </form>
 
-            {% if resultado is not none %}
-            <div class="result-box">
-                <h3>Resultado da Inversão:</h3>
-                <p style="font-size: 1.2rem; color: var(--rosa-escuro); font-weight: bold; margin-bottom: 15px;">
-                    {{ resultado }}
-                </p>
-                
-                <h3>Rastreamento das Chamadas Recursivas:</h3>
-                <ul class="steps-list">
-                    {% for passo in historico %}
-                        <li>{{ passo }}</li>
-                    {% endfor %}
-                </ul>
+    <div class="algorithm-header">
+        <div class="algorithm-icon">🔄</div>
+
+        <h1>Inversão de String</h1>
+
+        <p>
+            Demonstração do funcionamento da recursão através da inversão
+            de palavras e frases.
+        </p>
+    </div>
+
+    <div class="card">
+
+        <form method="POST">
+
+            <div class="form-group">
+                <label for="texto">Digite uma palavra ou frase</label>
+
+                <input
+                    type="text"
+                    id="texto"
+                    name="texto"
+                    value="{{ texto or '' }}"
+                    placeholder="Ex: Fundamentos Matemáticos"
+                    required>
             </div>
-            {% endif %}
 
-            <a href="{{ url_for('index') }}" class="btn-back">&larr; Voltar para a Home</a>
+            <button type="submit" class="btn-submit">
+                Inverter String
+            </button>
+
+        </form>
+
+        {% if resultado is not none %}
+
+        <div class="result-box">
+
+            <div class="result-highlight">
+                <span>Resultado</span>
+                <strong>{{ resultado }}</strong>
+            </div>
+
+            <h3>Chamadas Recursivas</h3>
+
+            <ul class="steps-list">
+                {% for passo in historico %}
+                <li>{{ passo }}</li>
+                {% endfor %}
+            </ul>
+
         </div>
-    </main>
 
-    <footer>
-        Desenvolvido por: [Nome dos Autores Aqui] &copy; 2026
+        {% endif %}
+
+        <a href="{{ url_for('index') }}" class="btn-back">
+            ← Voltar para Home
+        </a>
+
+    </div>
+
+</main>
+
+      <footer>
+        Desenvolvido por: Ana Luiza, Giulia Guizzo e Eloá Brizeis &copy; 2026
     </footer>
 
 </body>

@@ -3,13 +3,6 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # --- Torres de Hanói ---
-def hanoi(n, origem, destino, auxiliar, passos_lista):
-    if n == 1:
-        passos_lista.append(f"Mover disco 1 de {origem} para {destino}")
-        return
-    hanoi(n - 1, origem, auxiliar, destino, passos_lista)
-    passos_lista.append(f"Mover disco {n} de {origem} para {destino}")
-    hanoi(n - 1, auxiliar, destino, origin=origem, passos_lista=passos_lista)
 
 # Correção na assinatura interna para evitar confusão de parâmetros nomeados
 def hanoi_runner(n, origem, destino, auxiliar, lista):

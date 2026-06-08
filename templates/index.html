@@ -3,26 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabalho Final - Fundamentos Matemáticos</title>
+    <title>Fundamentos Matemáticos</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <header>
-        <h1>Trabalho Final - Fundamentos Matemáticos</h1>
-        <p>Autores: [Nome dos Autores Aqui]</p>
-    </header>
+<header class="hero">
+    <div class="hero-content">
+        <span class="badge">Projeto Acadêmico</span>
 
-    <main>
-        <div class="nav-container">
-            <a href="{{ url_for('torres_de_hanoi') }}" class="btn-menu">Torres de Hanói</a>
-            <a href="{{ url_for('inversao_de_string') }}" class="btn-menu">Inversão de String</a>
-            <a href="{{ url_for('decimal_para_binario') }}" class="btn-menu">Decimal para Binário</a>
+        <h1>Fundamentos Matemáticos</h1>
+
+        <p>
+            Implementação de algoritmos recursivos e conceitos matemáticos
+            utilizando Python e Flask.
+        </p>
+
+        <div class="authors">
+            Desenvolvido por <strong>Ana Luiza, Giulia Guizzo e Eloá Brizeis</strong>
         </div>
-    </main>
+    </div>
+</header>
 
-    <footer>
-        Desenvolvido por: [Nome dos Autores Aqui] &copy; 2026
+<main>
+
+    <section class="cards-grid">
+
+        <a href="{{ url_for('torres_de_hanoi') }}" class="feature-card">
+            <div class="icon">🗼</div>
+            <h2>Torres de Hanói</h2>
+            <p>
+                Visualize passo a passo a solução clássica utilizando recursão.
+            </p>
+        </a>
+
+        <a href="{{ url_for('inversao_de_string') }}" class="feature-card">
+            <div class="icon">🔄</div>
+            <h2>Inversão de String</h2>
+            <p>
+                Demonstração prática da recursividade aplicada a textos.
+            </p>
+        </a>
+
+        <a href="{{ url_for('decimal_para_binario') }}" class="feature-card">
+            <div class="icon">💻</div>
+            <h2>Decimal → Binário</h2>
+            <p>
+                Conversão numérica utilizando divisão sucessiva recursiva.
+            </p>
+        </a>
+
+    </section>
+
+</main>
+
+  <footer>
+        Desenvolvido por: Ana Luiza, Giulia Guizzo e Eloá Brizeis &copy; 2026
     </footer>
 
 </body>
