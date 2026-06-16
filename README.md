@@ -53,13 +53,13 @@ projeto/
 ### 1. Clone o repositório
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone (https://github.com/anafkr/trabalho-final-fundamentosmat.git)
 ```
 
 ### 2. Acesse a pasta do projeto
 
 ```bash
-cd nome-do-projeto
+cd trabalho-final-fundamentosmat
 ```
 
 ### 3. Instale o Flask
